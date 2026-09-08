@@ -1,0 +1,33 @@
+vector_numeric = c(15, 3, 27)
+vector_integer = c(5L, 7L, 4L)
+vector_logical = c(FALSE, TRUE, FALSE)
+vector_character = c("Oca","Mahasiswa","Statistika")
+
+matrix = matrix(7:15, nrow = 3, ncol = 3)
+array = array(7:15, dim=c(2,3,2))
+
+dataframe = data.frame(
+  character = c("Oca","Mahasiswa","Statistika", "Untirta"),
+  numeric = c(15, 3, 27, 12),
+  logicalv1 = c(FALSE, TRUE, FALSE, TRUE),
+  logicalv2 = c(TRUE, FALSE, TRUE, FALSE)
+)
+
+listv1= list(
+  vector_numeric = c(15, 3, 27),
+  vector_integer = c(5L, 7L, 4L),
+  dataframe = data.frame(
+    character = c("Oca","Mahasiswa","Statistika", "Untirta"),
+    numeric = c(15, 3, 27, 12),
+    logicalv1 = c(FALSE, TRUE, FALSE, TRUE),
+    logicalv2 = c(TRUE, FALSE, TRUE, FALSE)
+  ),
+  list(numeric = c(15, 3, 27, 12),
+       vector_integer = c(5L, 7L, 4L, 8L),
+       dataframe = data.frame(
+         character = c("Oca","Mahasiswa","Statistika"),
+         numeric = c(15, 3, 27),
+         logicalv1 = c(FALSE, TRUE, FALSE)
+  )
+)
+)
