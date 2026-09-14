@@ -1,1 +1,1 @@
-# Tugas-Komputasi-Statistika-1
+# Tugas-Komputasi-Statistika
