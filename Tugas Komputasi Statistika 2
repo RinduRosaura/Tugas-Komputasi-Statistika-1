@@ -1,0 +1,44 @@
+#Rindu Rosaura (3338250046) 3A
+
+# 1. Menampilkan data Sepal.length
+iris$Sepal.Length
+
+# 2. Meneybutkan tipe data tiap kolom
+sapply(iris, class)
+
+# 3. Menambah variabel baru "Turunan"
+library(dplyr)
+iris = iris %>% 
+  mutate(
+    Turunan = ifelse(Sepal.Width > 3, "Besar", "Kecil")
+  )
+head(iris)
+
+# 4. Merubah variabel "Turunan" menjadi "Sepal"
+library(dplyr)
+iris = iris %>%
+  rename( Sepal = Turunan )
+head(iris)
+
+# 5. Mengambil Sepal bernilai besar dari species Virginica
+data_virginica <- filter(iris, Sepal == "Besar" & Species == "virginica")
+print(data_virginica)
+
+# 6. Cek jumlah Species
+table(iris$Species)
+
+# 7. Mememecah data Iris menjadi 3 data frame berdasarkan species tertentu
+Iris_Setosa = Iris_Setosa <- iris[iris$Species == "setosa", ]
+Iris_Setosa
+Iris_Versicolor = Iris_Versicolor <- iris[iris$Species == "versicolor", ]
+Iris_Versicolor
+Iris_Virginica = Iris_Virginica <- iris[iris$Species == "virginica", ]
+Iris_Virginica
+
+# 8. Mengurutkan data berdasarkan Sepal.Width dari setiap data frame
+Iris_Setosa_Terurut = arrange(Iris_Setosa, Sepal.Width)
+Iris_Setosa_Terurut
+Iris_Versicolor_Terurut = arrange(Iris_Versicolor, Sepal.Width)
+Iris_Versicolor_Terurut
+Iris_Virginica_Terurut = arrange(Iris_Virginica, Sepal.Width)
+Iris_Virginica_Terurut
