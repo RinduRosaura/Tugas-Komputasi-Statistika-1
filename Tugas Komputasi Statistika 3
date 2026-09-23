@@ -1,0 +1,29 @@
+# 1. Buka data airquality
+data("airquality")
+View(airquality)
+data(airquality)
+airquality
+
+# 2. Buat histogram untuk variabel "wind" sertakan juga density nya
+density_wind = density(airquality$Wind)
+hist(airquality$Wind,
+     probability = TRUE,
+     xlab = "Wind",
+     main = "Histogram + Density Curve")
+lines(density_wind, col = "pink", lwd = 2)
+
+# 3. Buat Boxplot dan steam dan leaf
+boxplot(airquality$Wind,
+        main = "Boxplot Wind",
+        xlab = "Kecepatan Angin")
+
+stem(airquality$Wind)
+
+# 4. Scatter Plot wind vs temp
+plot(x = airquality$Wind,
+     y = airquality$Temp,
+     main = "Scatter Plot : Wind vs Temp",
+     xlab = "Kecepatan Angin",
+     ylab = "Suhu",
+     pch = 19,
+     col = "blue")
